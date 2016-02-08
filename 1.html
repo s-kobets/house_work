@@ -1,0 +1,34 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Кобец Сергей</title>
+
+	</head>
+	<body>
+	<!-- 1-e Zadanie
+		<script defer>
+				var a,b;
+				a=parseInt(prompt('Введите 1-e число'));
+				b=parseInt(prompt('Введите 2-e число'));
+				alert(a*b);
+				alert(a+b);
+		</script>
+	exit 1-e Zadanie-->
+	<script>
+	var a,b;
+	a=parseInt(prompt('Введите 1-e число'));
+	b=parseInt(prompt('Введите 2-e число'));
+ 
+while (a!=0 && b!=0){
+   
+    if (a > b) {a = a % b}
+
+    else {b = b % a}
+}
+alert(a+b);	
+	</script>
+
+	</body>
+
+</html>
