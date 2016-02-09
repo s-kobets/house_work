@@ -1,0 +1,52 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Кобец Сергей</title>
+
+	</head>
+	<body>
+
+	<script defer>
+	/*2-е задание*/
+	var a;
+	a=parseInt(prompt('Введите 1-e число'));
+	chet(a);
+	function chet(num){
+		if (num%2 == 0){alert('число ' +num+' четное');}
+		else {alert('число ' +num+' нечетное');}
+	}
+	/*2-е задание*/
+	var a,b,c;
+	a=parseInt(prompt('Введите 1-e число'));
+	b=parseInt(prompt('Введите 2-e число'));
+	c=parseInt(prompt('Введите 3-e число'));
+	main(a,b,c);
+	function max(a,b){
+		if(a>b){return a}
+		else{return b}
+	}
+	function min(a,b){
+		if(a<b){return a}
+		else{return b}
+	}
+	function main(a,b,c){
+		alert(max(max(a,b),c)/min(min(a,b),c)) ;
+	}
+	/*3-е задание*/
+	var a,b;
+	a=parseInt(prompt('Введите 1-e число'));
+	b=parseInt(prompt('Введите 2-e число'));
+	if (a<=10 && b<=10){
+		rec(a,b);
+
+	}
+	function rec(a,b){
+				alert(a);
+				if (a!=b){rec(a+1,b);}
+			}	
+	</script>
+
+	</body>
+
+</html>

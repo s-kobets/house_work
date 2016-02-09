@@ -1,0 +1,73 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Кобец Сергей</title>
+		<script src='snap.svg-min.js'></script>
+	</head>
+	<body>
+	<svg id="svg" width='100%' height='500px'></svg>
+	<script defer>
+	/*1-е задание*/
+	var a=[10,20,30,40,20];
+  var count=0;
+  for(var i=0;i<a.length;i++){
+  	count+=a[i]/a.length;
+  }
+	alert(count);
+	/*2-е задание*/
+	var s = Snap("#svg");
+	var bigCircle = s.circle(150,150,200);
+	bigCircle.attr({
+    fill: "#bada55",
+    stroke: "#000",
+    strokeWidth: 5
+});
+	var smallCircle = s.circle(100, 150, 70);
+	var discs = s.group(smallCircle, s.circle(230, 150, 70));
+	discs.attr({
+    fill: "#fff"
+});
+	bigCircle.attr({
+    mask: discs
+});
+var p = s.path("M10-5-10,15M15,0,0,15M0-5-20,15").attr({
+        fill: "none",
+        stroke: "#bada55",
+        strokeWidth: 5
+    });
+
+p = p.pattern(0, 0, 10, 10);
+bigCircle.attr({
+    fill: p
+});
+Snap.load('attach.svg', function(f){
+	var g = f.select('g');
+	s.append(g);
+});
+var t = s.text(200, 120, ["attach", ".", "svg"]);
+t.selectAll("tspan:nth-child(3)").attr({
+    fill: "#900",
+    "font-size": "20px"
+});
+/*3-e задание*/
+function F(x,y,r)
+{
+	var circle = s.circle(x, y, r);
+	circle.attr({
+		fill: "#fff",
+    stroke: "#000",
+    strokeWidth: 5
+  });
+
+	if (x>20) {
+		F(x-20,y,r-20);
+	}
+
+}
+F(700,150,100);
+	</script>
+
+	</body>
+
+</html>
